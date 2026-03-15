@@ -130,8 +130,8 @@ const Home = () => {
       <Nabvar />
 
       {/* HEADER */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between px-6 md:px-20 pt-8 gap-6">
-        <h3 className="text-3xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.5)] animate-[pulse_4s_ease-in-out_infinite]">Ready to build something amazing today? 🚀</h3>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-20 pt-8 gap-6">
+        <h3 className="text-2xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(168,85,247,0.5)] animate-[pulse_4s_ease-in-out_infinite]">Ready to build something amazing today? 🚀</h3>
         <button onClick={() => setIsCreateModelShow(true)}
           className="px-6 py-3 w-full md:w-auto rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500 hover:scale-105 transition-all shadow-lg shadow-indigo-500/30">
           + Create Project
@@ -139,7 +139,7 @@ const Home = () => {
       </div>
 
       {/* PROJECT GRID */}
-      <div className="px-6 md:px-20 mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div className="px-4 md:px-20 mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects && projects.length > 0 ? projects.map((project) => (
           <div key={project._id}
             className="group bg-[#020617]/60 backdrop-blur-xl border border-white/10 hover:border-indigo-400/40 p-6 rounded-2xl transition-all hover:scale-[1.03] shadow-lg">
@@ -181,7 +181,7 @@ const Home = () => {
       {
         isCreateModelShow && (
           <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center">
-            <div className="bg-[#020617] border border-white/10 rounded-2xl p-6 md:p-8 w-[90%] md:w-[420px] shadow-2xl">
+            <div className="bg-[#020617] border border-white/10 rounded-2xl p-6 md:p-8 w-[95%] md:w-[420px] shadow-2xl">
               <h3 className="text-2xl font-semibold mb-4">Create Project</h3>
               <input onChange={(e) => setName(e.target.value)} value={name}
                 className="w-full mb-4 px-4 py-3 rounded-xl bg-[#0f172a] border border-gray-700 focus:border-indigo-500 outline-none"
